@@ -20,7 +20,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         const longText = 'TEste Cezar Felipe cypress teste teste teste TEste Cezar Felipe cypress teste'+
                          'Cezar Felipe cypress teste testeteste TEste Cezar Felipe cypress teste teste'+
                          'testeteste teste TEste '
-        cy.get('#firstName').type('Cezar Felipe')
+        cy.get('#firstName').type('Cezar teste')
         cy.get('#lastName').type('Reis de Paula')
         cy.get('#email').type('cezarfeliperp@gmail.com')
         cy.get('#open-text-area').type(longText, {delay: 0 })
@@ -215,7 +215,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .should('not.be.visible')
     })
 
-    it.only('preenche a area de texto usando o comando invoke', () => {
+    it('preenche a area de texto usando o comando invoke', () => {
 
       cy.get('#firstName')
         .invoke('val', 'Cezar')
@@ -223,7 +223,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
     })
 
-    it.only('Ache o gato', ()=>{
+    it('Ache o gato', ()=>{
 
       cy.get('#cat')
         .invoke('show')
